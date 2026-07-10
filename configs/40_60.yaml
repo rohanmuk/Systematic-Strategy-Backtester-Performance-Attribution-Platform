@@ -1,0 +1,12 @@
+name: "40/60"
+description: "Conservative 40% US equity (VTI) / 60% US aggregate bonds (AGG), rebalanced quarterly."
+
+strategy:
+  type: static_weights
+  params:
+    weights: { VTI: 0.40, AGG: 0.60 }
+
+rebalance:
+  method: calendar
+  frequency: quarterly
+  cost_bps: 10

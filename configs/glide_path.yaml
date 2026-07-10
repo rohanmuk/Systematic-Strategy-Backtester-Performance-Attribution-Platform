@@ -1,0 +1,17 @@
+name: "Glide Path 30->65"
+description: "Age-based glide path from 90% growth at age 30 to 30% growth at 65; growth = equities+REIT+gold, defensive = bonds+cash. Rebalanced annually."
+
+strategy:
+  type: glide_path
+  params:
+    start_age: 30
+    retirement_age: 65
+    equity_start: 0.90
+    equity_end: 0.30
+    growth_assets: [VTI, VEA, VWO, VNQ, GLD]
+    defensive_assets: [AGG, TIP, BIL]
+
+rebalance:
+  method: calendar
+  frequency: annual
+  cost_bps: 10

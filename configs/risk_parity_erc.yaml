@@ -1,0 +1,14 @@
+name: "Risk Parity (ERC)"
+description: "Full equal-risk-contribution portfolio over the risky assets (trailing 36m covariance), rebalanced monthly."
+
+strategy:
+  type: risk_parity
+  params:
+    lookback: 36
+    include_cash: false
+    shrinkage: 0.1
+
+rebalance:
+  method: calendar
+  frequency: monthly
+  cost_bps: 10

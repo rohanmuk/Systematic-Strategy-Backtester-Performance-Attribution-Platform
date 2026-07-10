@@ -1,0 +1,13 @@
+name: "Inverse Vol"
+description: "Naive risk parity: weights proportional to 1/volatility (trailing 12m), cash excluded, rebalanced monthly."
+
+strategy:
+  type: inverse_volatility
+  params:
+    lookback: 12
+    include_cash: false
+
+rebalance:
+  method: calendar
+  frequency: monthly
+  cost_bps: 10

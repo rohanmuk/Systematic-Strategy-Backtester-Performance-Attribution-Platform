@@ -1,0 +1,16 @@
+name: "Target Vol 10%"
+description: "10% annualized volatility target on an equal-weight risky base; de-risks into cash (BIL), no leverage. Threshold-rebalanced at a 5% drift band."
+
+strategy:
+  type: target_volatility
+  params:
+    target_vol: 0.10
+    lookback: 12
+    base: equal_weight
+    base_params:
+      include_cash: false
+
+rebalance:
+  method: threshold
+  band: 0.05
+  cost_bps: 10

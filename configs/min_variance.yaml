@@ -1,0 +1,14 @@
+name: "Min Variance"
+description: "Long-only global minimum-variance portfolio (trailing 36m shrunk covariance), rebalanced monthly."
+
+strategy:
+  type: min_variance
+  params:
+    lookback: 36
+    include_cash: false
+    shrinkage: 0.1
+
+rebalance:
+  method: calendar
+  frequency: monthly
+  cost_bps: 10

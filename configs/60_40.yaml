@@ -1,0 +1,15 @@
+name: "60/40"
+description: "Classic 60% US equity (VTI) / 40% US aggregate bonds (AGG), rebalanced quarterly."
+
+# universe / risk_free omitted -> full default 8-ETF universe, BIL as cash.
+# benchmark omitted -> default 60/40 (VTI/AGG), so this strategy IS the benchmark.
+
+strategy:
+  type: static_weights
+  params:
+    weights: { VTI: 0.60, AGG: 0.40 }
+
+rebalance:
+  method: calendar
+  frequency: quarterly
+  cost_bps: 10

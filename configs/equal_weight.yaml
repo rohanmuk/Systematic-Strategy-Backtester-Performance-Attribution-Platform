@@ -1,0 +1,12 @@
+name: "Equal Weight"
+description: "1/N across the full 8-asset universe (including cash), rebalanced quarterly."
+
+strategy:
+  type: equal_weight
+  params:
+    include_cash: true
+
+rebalance:
+  method: calendar
+  frequency: quarterly
+  cost_bps: 10

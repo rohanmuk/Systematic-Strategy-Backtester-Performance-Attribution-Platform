@@ -1,0 +1,31 @@
+# Cached market data (reproducible via `backtester run`; not committed)
+data/*.parquet
+data/*.csv
+data/*.meta.json
+
+# Generated reports & figures (a curated sample set is committed under reports/sample/)
+reports/*.html
+reports/*.csv
+reports/figures/*.png
+!reports/sample/**
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# keep cache dir
+!data/.gitkeep
+!reports/.gitkeep

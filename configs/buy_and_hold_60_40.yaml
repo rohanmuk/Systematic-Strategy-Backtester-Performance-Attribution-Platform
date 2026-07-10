@@ -1,0 +1,11 @@
+name: "Buy & Hold 60/40"
+description: "Baseline: allocate 60/40 (VTI/AGG) once and never rebalance; weights drift with the market."
+
+strategy:
+  type: static_weights
+  params:
+    weights: { VTI: 0.60, AGG: 0.40 }
+
+rebalance:
+  method: buy_and_hold
+  cost_bps: 10
