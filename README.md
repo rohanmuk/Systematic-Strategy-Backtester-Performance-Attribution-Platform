@@ -1,8 +1,8 @@
-# Asset-Allocation Backtester & Benchmark-Relative Analytics Engine
+# Systematic Strategy Backtester & Performance-Attribution Platform
 
-A config-driven engine for backtesting multi-asset allocation strategies and analysing them **the way a portfolio analyst would** — on a benchmark-relative basis, with every metric implemented from first principles so the methodology is fully auditable.
+Two portfolios can post the same return and be entirely different bets. This project backtests multi-asset allocation strategies — static weight, risk parity, minimum-variance, target-vol, and glide-path — and evaluates them the way a portfolio analyst actually would: relative to a benchmark. Alongside the usual absolute metrics (CAGR, Sharpe, max drawdown), it reports active return, tracking error, information ratio, up/down capture, and both return- and risk-contribution by asset, with transaction costs and turnover modeled explicitly. Every metric is implemented from its formula rather than pulled from a library, so each result is traceable and defensible. The goal isn't to find the "best" allocation — it's to make the trade-offs between allocations legible.
 
-The emphasis of this project is **correctness and defensible methodology**, not feature count. The analytical core (`backtester.metrics`) contains no hidden library calls: CAGR, Sharpe, tracking error, information ratio, up/down capture, beta, alpha, and the risk decomposition are all written out explicitly and unit-tested against hand-computed values (and cross-checked against `empyrical`).
+The analytical core (`backtester.metrics`) contains no hidden library calls: CAGR, Sharpe, tracking error, information ratio, up/down capture, beta, alpha, and the risk decomposition are all written out explicitly and unit-tested against hand-computed values (and cross-checked against `empyrical`).
 
 ![Strategy comparison — growth of $1](reports/sample/figures/comparison_equity.png)
 
